@@ -1,0 +1,141 @@
+.header-panel{
+    padding-top: 60x;
+    padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+.white-rect{
+    width: fit-content;
+    padding: 15px;
+    background-color: white;
+    
+}
+
+.black-rect{
+    width: fit-content;
+    padding: 15px;
+    background-color: black;
+}
+
+.section-center{
+    width: 75%;
+    margin: 15px auto;
+}
+
+.text-section{
+    margin: 15px;
+}
+
+
+#access{
+    background-image: url("../images/headers/access.jpg");
+}
+
+#acquisition{
+    background-image: url("../images/headers/acquisition.jpg");
+}
+
+#assessing_skills{
+    background-image: url("../images/headers/assessing_skills.jpg");
+}
+
+#books{
+    background-image: url("../images/headers/books.jpg");
+}
+
+#disaster{
+    background-image: url("../images/headers/disaster.jpg");
+}
+
+#dust{
+    background-image: url("../images/headers/dust.jpg");
+}
+
+#electronic{
+    background-image: url("../images/headers/electronic.jpg");
+}
+
+#handling{
+    background-image: url("../images/headers/handling.jpg");
+}
+
+#health{
+    background-image: url("../images/headers/health.jpg");
+}
+
+#humidity{
+    background-image: url("../images/headers/humidity.jpg");
+}
+
+#leather{
+    background-image: url("../images/headers/leather.jpg");
+}
+
+#light{
+    background-image: url("../images/headers/light.jpg");
+}
+
+#management{
+    background-image: url("../images/headers/management.jpg");
+}
+
+#metal{
+    background-image: url("../images/headers/metal.jpg");
+}
+
+#networking{
+    background-image: url("../images/headers/networking.jpg");
+}
+
+#outdoor{
+    background-image: url("../images/headers/outdoor.jpg");
+}
+
+#paper{
+    background-image: url("../images/headers/paper.jpg");
+}
+
+#photographs{
+    background-image: url("../images/headers/photographs.jpg");
+}
+
+#planning{
+    background-image: url("../images/headers/planning.jpg");
+}
+
+#policy{
+    background-image: url("../images/headers/policy.jpg");
+}
+
+#storage{
+    background-image: url("../images/headers/storage.jpg");
+}
+
+#surveys{
+    background-position: center top;
+    background-image: url("../images/headers/surveys.jpg");
+}
+
+#transportation{
+    background-image: url("../images/headers/transportation.jpg");
+}
+
+#volunteer{
+    background-image: url("../images/headers/volunteer.jpg");
+}
+
+#wood{
+    background-image: url("../images/headers/wood.jpg");
+}
+
+#paintings{
+    background-image: url("../images/headers/paintings.jpg");
+}
