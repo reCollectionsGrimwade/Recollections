@@ -7135,7 +7135,7 @@ p.flex-caption {
   height: 36px;
   margin: -20px 0 0;
   display: block;
-  background: url(/web/20180911134704im_/http://culturalmaterials.net/wp/wp-content/themes/knowledgepress/assets/img/bg_direction_nav.png) no-repeat 0 0;
+  background: url() no-repeat 0 0;
   position: absolute;
   bottom: 20px;
   z-index: 10;
@@ -7232,13 +7232,13 @@ p.flex-caption {
  */
 /* FONT PATH
  * -------------------------- */
-@font-face {
+/* @font-face {
   font-family: 'FontAwesome';
   src: url('/web/20180911134704im_/http://culturalmaterials.net/wp/wp-content/themes/knowledgepress/assets/fonts/fontawesome-webfont.eot?v=4.1.0');
   src: url('/web/20180911134704im_/http://culturalmaterials.net/wp/wp-content/themes/knowledgepress/assets/fonts/fontawesome-webfont.eot#iefix&v=4.1.0') format('embedded-opentype'), url('/web/20180911134704im_/http://culturalmaterials.net/wp/wp-content/themes/knowledgepress/assets/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('/web/20180911134704im_/http://culturalmaterials.net/wp/wp-content/themes/knowledgepress/assets/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('/web/20180911134704im_/http://culturalmaterials.net/wp/wp-content/themes/knowledgepress/assets/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+} */
 .fa {
   display: inline-block;
   font-family: FontAwesome;
