@@ -35,6 +35,17 @@
 }
 
 
+.dslc-tabs-nav-hook.dslc-active {
+    background-color: rgb(227, 99, 77) !important;
+    border-left-color: #e8e8e8 !important;
+    border-right-color: #e8e8e8 !important;
+    border-top-color: #e8e8e8 !important;
+    border-bottom-color: rgb(255, 206, 206) !important;
+    border-style: solid solid solid solid !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+
 #access{
     background-image: url("../images/headers/access.jpg");
 }
