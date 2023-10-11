@@ -1,7 +1,8 @@
 from os import listdir
 from os.path import isfile, join
 
-# Add css section for all headers img
+# Add css banner images to all files (since css banner images are downloaded
+# separately from wayback)
 
 def get_all_files(mypath: str) -> list:
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
@@ -12,9 +13,10 @@ def get_header(filename):
     for header in headers:
         if header in filename.lower():
             return header
-    print(f"Heh? {filename}")
+    print(f"Missing {filename}")
 
-mypath = "D:\\Student@Work\\reCollection\\previous\\"
+# Path of the folder containing all pages
+mypath = "D:\\Student@Work\\reCollection\\reBuild_v1\\" 
 all_files = get_all_files(mypath)
 print(all_files)
 

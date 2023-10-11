@@ -1,7 +1,7 @@
 from os import listdir
 from os.path import isfile, join
 
-# Add css section for all headers img
+# Add css section for all headers img pre-downloaded from Wayback
 
 def get_all_files(mypath: str) -> list:
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]

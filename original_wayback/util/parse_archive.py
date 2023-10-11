@@ -3,6 +3,14 @@ from os import listdir
 from os.path import isfile, join
 import shutil
 
+# Workflow: Download all Wayback pages along with its dependency into 1 folder
+# (this original_wayback) -> Select shared dependency and put into 1 common
+# folder (as most dependency are shared, except images) -> Run this file
+# to remove all the wayback injection and cryptic, unnecessary part from the
+# CMS + parse the folders and remove everything except image, then move
+# everything to a new, cleaned folder for deployment 
+
+# File IO
 def get_all_files(mypath: str) -> list:
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     return onlyfiles
@@ -31,7 +39,7 @@ def clean_links(filename: str):
     with open(filename, "w", encoding='utf-8') as file:
         file.write(new_file)
 
-
+# Clean Wayback
 def clean_wayback(filename: str) -> str:
     title = filename.replace(" _ reCollections", "").replace(".html", "")
     temp_top = '''
@@ -92,6 +100,10 @@ body .before-main-wrapper .header-wrapper a, body .before-main-wrapper .header-w
     clean_links(new_name)
     return new_name
 
+def clean_and_move_single(mypath: str, topath: str, filename: str):
+    new_name = clean_wayback(filename)
+    move_file(mypath, topath, new_name)
+
 def clean_and_move(mypath: str, topath: str):
     # Clean and move all files in original_wayback
     all_files = get_all_files(mypath)
@@ -102,23 +114,15 @@ def clean_and_move(mypath: str, topath: str):
             continue
         clean_and_move_single(mypath, topath, file)
 
-def clean_and_move_single(mypath: str, topath: str, filename: str):
-    new_name = clean_wayback(filename)
-    move_file(mypath, topath, new_name)
 
-# Deal with folder
+
+# Deal with folder (Cleaning all dependencies except images)
 def is_img_file(filename:str) -> bool:
     all_img_ext = [".png", ".jpg", ".jpeg"]
     for img_ext in all_img_ext:
         if img_ext in filename.lower():
             return True
     return False
-
-def folder_parse(cur_path: str):
-    # Remove everything except images
-    all_folders = [f for f in listdir(cur_path) if not isfile(join(cur_path, f))]
-    for folder in all_folders:
-        folder_parser_single(cur_path, folder)
 
 def folder_parser_single(cur_path: str, folder: str):
     folder_path = join(cur_path, folder) + "\\"
@@ -130,11 +134,20 @@ def folder_parser_single(cur_path: str, folder: str):
             print(file)
             os.remove(join(folder_path, file))
 
+def folder_parse(cur_path: str):
+    # Remove everything except images
+    all_folders = [f for f in listdir(cur_path) if not isfile(join(cur_path, f))]
+    for folder in all_folders:
+        folder_parser_single(cur_path, folder)
+
+
+
 #----------------MAIN-----------------------------------
 
-
-mypath = "D:\\Student@Work\\reCollection\\previous\\original_wayback\\"
-topath = "D:\\Student@Work\\reCollection\\previous\\"
+# Path where all the files located
+mypath = "D:\\Student@Work\\reCollection\\reBuild_v1\\original_wayback\\"
+# Clean folder to move files to for deployment
+topath = "D:\\Student@Work\\reCollection\\reBuild_v1\\"
 
 # folder_parse(mypath)
 

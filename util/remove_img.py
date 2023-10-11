@@ -6,6 +6,8 @@ import shutil
 
 from typing import List
 
+# Used to remove all broken images from all files
+
 def get_all_files(mypath: str) -> list:
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     return onlyfiles
